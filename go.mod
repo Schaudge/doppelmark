@@ -7,7 +7,7 @@ require (
 	github.com/DataDog/zstd v1.5.5 // indirect
 	github.com/Schaudge/grailbase v0.0.0-20240221080929-a3080ca8c732
 	github.com/Schaudge/grailbio v0.0.0-20240221084236-67c769851cc7
-	github.com/Schaudge/grailbiobase v0.0.0-20240221015634-2331a57b5326 // indirect
+        github.com/grailbio/hts latest
 	github.com/StackExchange/wmi v1.2.1 // indirect
 	github.com/aws/aws-sdk-go v1.50.22 // indirect
 	github.com/biogo/store v0.0.0-20201120204734-aad293a2328f // indirect
@@ -22,7 +22,6 @@ require (
 	github.com/google/gops v0.3.28 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/gorilla/websocket v1.5.1 // indirect
-	github.com/grailbio/hts v1.0.1
 	github.com/grailbio/testutil v0.0.3
 	github.com/klauspost/compress v1.17.6 // indirect
 	github.com/klauspost/cpuid v1.3.1 // indirect

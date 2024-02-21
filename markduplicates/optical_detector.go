@@ -17,9 +17,9 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/grailbio/base/log"
-	"github.com/grailbio/bio/encoding/bam"
-	"github.com/grailbio/bio/encoding/bampair"
+	"github.com/Schaudge/grailbase/log"
+	"github.com/Schaudge/grailbio/encoding/bam"
+	"github.com/Schaudge/grailbio/encoding/bampair"
 )
 
 type sortingEntry struct {

@@ -16,7 +16,7 @@ package markduplicates
 import (
 	"fmt"
 
-	"github.com/grailbio/base/log"
+	"github.com/Schaudge/grailbase/log"
 )
 
 type Orientation uint8

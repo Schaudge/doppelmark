@@ -1,5 +1,5 @@
-[![Tests](https://github.com/grailbio/doppelmark/actions/workflows/tests.yml/badge.svg)](https://github.com/grailbio/doppelmark/actions/workflows/tests.yml)
-[![Lint](https://github.com/grailbio/doppelmark/actions/workflows/lint.yml/badge.svg)](https://github.com/grailbio/doppelmark/actions/workflows/lint.yml)
+[![Tests](https://github.com/Schaudge/doppelmark/actions/workflows/tests.yml/badge.svg)](https://github.com/Schaudge/doppelmark/actions/workflows/tests.yml)
+[![Lint](https://github.com/Schaudge/doppelmark/actions/workflows/lint.yml/badge.svg)](https://github.com/Schaudge/doppelmark/actions/workflows/lint.yml)
 
 ## doppelmark duplicate marking tool
 
@@ -15,7 +15,7 @@ running the shards in parallel. Each shard includes input
 decompression, duplicate marking, and compression of the resulting
 output data. It detects duplicates without sorting all records. For a 
 detailed description of the algorithm and design,
-see [doc.go](https://github.com/grailbio/doppelmark/markduplicates/doc.go).
+see [doc.go](https://github.com/Schaudge/doppelmark/markduplicates/doc.go).
 
-- [doppelmark](https://github.com/grailbio/doppelmark): High-performance duplicate marking tool
+- [doppelmark](https://github.com/Schaudge/doppelmark): High-performance duplicate marking tool
 

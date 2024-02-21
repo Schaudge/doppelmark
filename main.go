@@ -16,7 +16,7 @@ package main
 /*
   doppelmark is a tool for marking and removing PCR and optical
   duplicates. For more information, see
-  github.com/grailbio/doppelmark/markduplicates/doc.go
+  github.com/Schaudge/doppelmark/markduplicates/doc.go
 */
 
 import (
@@ -24,12 +24,12 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/grailbio/base/grail"
-	"github.com/grailbio/base/log"
-	"github.com/grailbio/base/vcontext"
-	gbam "github.com/grailbio/bio/encoding/bam"
-	"github.com/grailbio/bio/encoding/bamprovider"
-	md "github.com/grailbio/doppelmark/markduplicates"
+	"github.com/Schaudge/grailbase/grail"
+	"github.com/Schaudge/grailbase/log"
+	"github.com/Schaudge/grailbase/vcontext"
+	gbam "github.com/Schaudge/grailbio/encoding/bam"
+	"github.com/Schaudge/grailbio/encoding/bamprovider"
+	md "github.com/Schaudge/doppelmark/markduplicates"
 )
 
 var (

@@ -21,8 +21,8 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/grailbio/base/errors"
-	"github.com/grailbio/base/log"
+	"github.com/Schaudge/grailbase/errors"
+	"github.com/Schaudge/grailbase/log"
 	"github.com/grailbio/hts/sam"
 )
 

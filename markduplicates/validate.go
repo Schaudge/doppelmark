@@ -16,7 +16,7 @@ package markduplicates
 import (
 	"fmt"
 
-	"github.com/grailbio/bio/encoding/bamprovider"
+	"github.com/Schaudge/grailbio/encoding/bamprovider"
 )
 
 func validate(opts *Opts) error {

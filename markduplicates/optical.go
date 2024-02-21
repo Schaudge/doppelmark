@@ -20,7 +20,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/grailbio/base/log"
+	"github.com/Schaudge/grailbase/log"
 )
 
 // PhysicalLocation describes a read's physical location on the flow

@@ -58,13 +58,13 @@ linters-settings:
         # run `go tool vet help printf` to see available settings for `printf`
         # analyzer
         funcs:
-          - (github.com/grailbio/base/log).Fatal
-          - (github.com/grailbio/base/log).Output
-          - (github.com/grailbio/base/log).Outputf
-          - (github.com/grailbio/base/log).Panic
-          - (github.com/grailbio/base/log).Panicf
-          - (github.com/grailbio/base/log).Print
-          - (github.com/grailbio/base/log).Printf
+          - (github.com/Schaudge/grailbase/log).Fatal
+          - (github.com/Schaudge/grailbase/log).Output
+          - (github.com/Schaudge/grailbase/log).Outputf
+          - (github.com/Schaudge/grailbase/log).Panic
+          - (github.com/Schaudge/grailbase/log).Panicf
+          - (github.com/Schaudge/grailbase/log).Print
+          - (github.com/Schaudge/grailbase/log).Printf
 
   unused:
     # do not report unused exported identifiers

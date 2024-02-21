@@ -16,8 +16,8 @@ package markduplicates
 import (
 	"fmt"
 
-	"github.com/grailbio/base/log"
-	"github.com/grailbio/bio/encoding/bam"
+	"github.com/Schaudge/grailbase/log"
+	"github.com/Schaudge/grailbio/encoding/bam"
 	"github.com/grailbio/hts/sam"
 )
 

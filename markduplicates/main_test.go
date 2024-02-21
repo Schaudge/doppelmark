@@ -20,8 +20,8 @@ import (
 	"sync"
 	"testing"
 
-	gbam "github.com/grailbio/bio/encoding/bam"
-	"github.com/grailbio/bio/encoding/bamprovider"
+	gbam "github.com/Schaudge/grailbio/encoding/bam"
+	"github.com/Schaudge/grailbio/encoding/bamprovider"
 	"github.com/grailbio/hts/sam"
 	"github.com/grailbio/testutil"
 	"github.com/stretchr/testify/assert"

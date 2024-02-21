@@ -7,7 +7,7 @@ require (
 	github.com/DataDog/zstd v1.5.5 // indirect
 	github.com/Schaudge/grailbase v0.0.0-20240221080929-a3080ca8c732
 	github.com/Schaudge/grailbio v0.0.0-20240221084236-67c769851cc7
-        github.com/grailbio/hts latest
+        github.com/Schaudge/hts latest
 	github.com/StackExchange/wmi v1.2.1 // indirect
 	github.com/aws/aws-sdk-go v1.50.22 // indirect
 	github.com/biogo/store v0.0.0-20201120204734-aad293a2328f // indirect

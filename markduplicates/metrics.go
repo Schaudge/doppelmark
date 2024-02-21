@@ -23,7 +23,7 @@ import (
 
 	"github.com/Schaudge/grailbase/errors"
 	"github.com/Schaudge/grailbase/log"
-	"github.com/grailbio/hts/sam"
+	"github.com/Schaudge/hts/sam"
 )
 
 // Metrics contains metrics from mark duplicates.

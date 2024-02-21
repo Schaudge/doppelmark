@@ -18,7 +18,7 @@ import (
 
 	"github.com/Schaudge/grailbase/log"
 	"github.com/Schaudge/grailbio/encoding/bam"
-	"github.com/grailbio/hts/sam"
+	"github.com/Schaudge/hts/sam"
 )
 
 type readPair struct {

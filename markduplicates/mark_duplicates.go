@@ -38,7 +38,7 @@ import (
 	"github.com/Schaudge/grailbio/encoding/bamprovider"
 	"github.com/Schaudge/grailbio/encoding/pam"
 	"github.com/Schaudge/grailbio/umi"
-	"github.com/grailbio/hts/sam"
+	"github.com/Schaudge/hts/sam"
 )
 
 // BagProcessor takes the set of bags from a particular shard, and

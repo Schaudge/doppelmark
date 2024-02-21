@@ -22,7 +22,7 @@ import (
 	"github.com/Schaudge/grailbio/encoding/bam"
 	"github.com/Schaudge/grailbio/umi"
 	"github.com/Schaudge/grailbio/util"
-	"github.com/grailbio/hts/sam"
+	"github.com/Schaudge/hts/sam"
 )
 
 var umiRe = regexp.MustCompile(`([ACGTNacgtn]+)\+([ACGTNacgtn]+)`)

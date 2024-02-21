@@ -22,7 +22,7 @@ import (
 
 	gbam "github.com/Schaudge/grailbio/encoding/bam"
 	"github.com/Schaudge/grailbio/encoding/bamprovider"
-	"github.com/grailbio/hts/sam"
+	"github.com/Schaudge/hts/sam"
 	"github.com/grailbio/testutil"
 	"github.com/stretchr/testify/assert"
 )

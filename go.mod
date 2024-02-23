@@ -3,9 +3,9 @@ module github.com/Schaudge/doppelmark
 go 1.19
 
 require (
-	github.com/Schaudge/grailbase v0.0.0-20240221145832-fed9326ae853
-	github.com/Schaudge/grailbio v0.0.0-20240221142342-53bf6987467c
-	github.com/Schaudge/hts v0.0.0-20240221134046-27ce3902bffb
+	github.com/Schaudge/grailbase v0.0.0-20240223061707-44c758a471c0
+	github.com/Schaudge/grailbio v0.0.0-20240223063457-fcacf029428f
+	github.com/Schaudge/hts v0.0.0-20240223063651-737b4d69d68c
 	github.com/grailbio/testutil v0.0.3
 	github.com/stretchr/testify v1.8.4
 )
@@ -13,7 +13,7 @@ require (
 require (
 	blainsmith.com/go/seahash v1.2.1 // indirect
 	github.com/DataDog/zstd v1.5.5 // indirect
-	github.com/aws/aws-sdk-go v1.50.22 // indirect
+	github.com/aws/aws-sdk-go v1.50.24 // indirect
 	github.com/biogo/store v0.0.0-20201120204734-aad293a2328f // indirect
 	github.com/bytedance/sonic v1.11.0 // indirect
 	github.com/chenzhuoyu/base64x v0.0.0-20230717121745-296ad89f973d // indirect
@@ -39,7 +39,7 @@ require (
 	github.com/huichen/murmur v0.0.0-20130808212358-e0489551cf51 // indirect
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
-	github.com/klauspost/compress v1.17.6 // indirect
+	github.com/klauspost/compress v1.17.7 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.7 // indirect
 	github.com/leemcloughlin/gofarmhash v0.0.0-20160919192320-0a055c5b87a8 // indirect
 	github.com/leodido/go-urn v1.4.0 // indirect

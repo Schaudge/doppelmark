@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/Schaudge/grailbase v0.0.0-20240223061707-44c758a471c0
-	github.com/Schaudge/grailbio v0.0.0-20240223063457-fcacf029428f
+	github.com/Schaudge/grailbio v0.0.0-20240223065831-51deab3a8f55
 	github.com/Schaudge/hts v0.0.0-20240223063651-737b4d69d68c
 	github.com/grailbio/testutil v0.0.3
 	github.com/stretchr/testify v1.8.4
@@ -13,7 +13,7 @@ require (
 require (
 	blainsmith.com/go/seahash v1.2.1 // indirect
 	github.com/DataDog/zstd v1.5.5 // indirect
-	github.com/aws/aws-sdk-go v1.50.24 // indirect
+	github.com/aws/aws-sdk-go v1.50.25 // indirect
 	github.com/biogo/store v0.0.0-20201120204734-aad293a2328f // indirect
 	github.com/bytedance/sonic v1.11.0 // indirect
 	github.com/chenzhuoyu/base64x v0.0.0-20230717121745-296ad89f973d // indirect

@@ -19,3 +19,16 @@ see [doc.go](https://github.com/Schaudge/doppelmark/markduplicates/doc.go).
 
 - [doppelmark](https://github.com/Schaudge/doppelmark): High-performance duplicate marking tool
 
+## build
+for static compiled binary
+```
+CGO_ENABLED=0 go build --ldflags "-extldflags -static" .
+```
+## examples
+simple command:
+```
+./doppelmark --bam /home/schaudge/datasets/bam/example.bam \
+   --output /home/schaudge/datasets/bam/output.bam \
+   --metrics /home/schaudge/datasets/bam/duplication.metrics 
+   --clip-padding 300
+```

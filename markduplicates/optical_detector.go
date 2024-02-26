@@ -4,7 +4,7 @@
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//    http://www.apache.org/licenses/LICENSE-2.0
+//	http://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -108,8 +108,8 @@ func (t *TileOpticalDetector) Detect(readGroupLibrary map[string]string, duplica
 	// optical duplicates.  We split by tile to reduce the cost of
 	// comparing each pair against the other pairs.
 	type batchKey struct {
-		lane            int
-		tile            int
+		lane            string
+		tile            string
 		readGroup       string
 		readGroupFound  bool
 		r1R2Orientation Orientation

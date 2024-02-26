@@ -4,7 +4,7 @@
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//    http://www.apache.org/licenses/LICENSE-2.0
+//	http://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -24,12 +24,12 @@ import (
 	"runtime"
 	"strings"
 
+	md "github.com/Schaudge/doppelmark/markduplicates"
 	"github.com/Schaudge/grailbase/grail"
 	"github.com/Schaudge/grailbase/log"
 	"github.com/Schaudge/grailbase/vcontext"
 	gbam "github.com/Schaudge/grailbio/encoding/bam"
 	"github.com/Schaudge/grailbio/encoding/bamprovider"
-	md "github.com/Schaudge/doppelmark/markduplicates"
 )
 
 var (
@@ -46,7 +46,7 @@ var (
 	shardSize            = flag.Int("shard-size", 5000000, "approx shard size in bytes")
 	maxDepth             = flag.Int("max-depth", 3000000, "maximum coverage depth at a position, set to 0 to disable")
 	minBases             = flag.Int("min-bases", 5000, "minimum number of bases per shard")
-	padding              = flag.Int("clip-padding", 143, "padding in bp, this must be larger than the largest per-read clipping distance")
+	padding              = flag.Int("clip-padding", 251, "padding in bp, this must be larger than the largest per-read clipping distance")
 	clearExisting        = flag.Bool("clear-existing", false, "clear existing duplicate flag before marking")
 	removeDups           = flag.Bool("remove-dups", false, "remove duplicates instead of flagging them")
 	tagDups              = flag.Bool("tag-duplicates", false, "tag duplicates as DT:Z:SQ (optical) or DT:Z:LB (pcr), and include DI and DS tags")

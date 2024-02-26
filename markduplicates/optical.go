@@ -4,7 +4,7 @@
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//    http://www.apache.org/licenses/LICENSE-2.0
+//	http://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,12 +31,12 @@ import (
 // tile 4. X and Y describe the X and Y coordinates of the well within
 // the tile.
 type PhysicalLocation struct {
-	Lane       int
-	Surface    int
-	Swath      int
-	Section    int
+	Lane       string
+	Surface    string
+	Swath      string
+	Section    string
+	TileName   string
 	TileNumber int
-	TileName   int
 	X          int
 	Y          int
 }
@@ -93,7 +93,7 @@ func addOpticalDistances(opts *Opts, readGroupLibrary map[string]string,
 
 	if len(opts.OpticalHistogram) > 0 {
 		type key struct {
-			lane           int
+			lane           string
 			readGroup      string
 			readGroupFound bool
 			orientation    Orientation
@@ -138,10 +138,12 @@ func opticalDistance(a, b *PhysicalLocation) int {
 //
 // The tileName be formatted as a 4 or 5 digit Illumina tileName.
 // For a description of 4 digit tile numbers, see Appendix B, section Tile Numbering in
-//  http://support.illumina.com.cn/content/dam/illumina-support/documents/documentation/system_documentation/hiseqx/hiseq-x-system-guide-15050091-e.pdf
+//
+//	http://support.illumina.com.cn/content/dam/illumina-support/documents/documentation/system_documentation/hiseqx/hiseq-x-system-guide-15050091-e.pdf
 //
 // For a description of 5 digit tile numbers, see Appendix C, section Tile Numbering in
-//   https://support.illumina.com/content/dam/illumina-support/documents/documentation/system_documentation/nextseq/nextseq-550-system-guide-15069765-05.pdf
+//
+//	https://support.illumina.com/content/dam/illumina-support/documents/documentation/system_documentation/nextseq/nextseq-550-system-guide-15069765-05.pdf
 func ParseLocation(qname string) PhysicalLocation {
 	fields := strings.Split(qname, ":")
 	var tileIdx int
@@ -160,16 +162,9 @@ func ParseLocation(qname string) PhysicalLocation {
 		location PhysicalLocation
 		err      error
 	)
-	location.Lane, err = strconv.Atoi(fields[tileIdx-1])
-	if err != nil {
-		log.Fatalf("Could not parse name: %s, could not convert lane to integer: %v",
-			qname, err)
-	}
-	location.TileName, err = strconv.Atoi(fields[tileIdx])
-	if err != nil {
-		log.Fatalf("Could not parse name: %s, could not convert tile to integer: %v",
-			qname, err)
-	}
+	location.Lane = fields[tileIdx-1]
+	location.TileName = fields[tileIdx]
+
 	location.X, err = strconv.Atoi(fields[tileIdx+1])
 	if err != nil {
 		log.Fatalf("Could not parse name: %s, could not convert x to integer: %v",
@@ -181,18 +176,28 @@ func ParseLocation(qname string) PhysicalLocation {
 			qname, err)
 	}
 
-	if location.TileName > 99999 {
-		log.Fatalf("Could not parse name: %s, unexpected tile name %d, expected 4 or 5 digits",
-			qname, location.TileName)
-	} else if location.TileName > 9999 {
-		location.Surface = location.TileName / 10000
-		location.Swath = (location.TileName % 10000) / 1000
-		location.Section = (location.TileName % 1000) / 100
-		location.TileNumber = location.TileName % 100
+	if len(location.TileName) == 8 && strings.HasPrefix(location.TileName, "R") && strings.Contains(location.TileName, "C") {
+		// GeneMind sequencer fastq format
+		rowFOVIndex, err1 := strconv.Atoi(location.TileName[1:4])
+		colFOVIndex, err2 := strconv.Atoi(location.TileName[5:])
+		if err1 != nil || err2 != nil {
+			log.Fatalf("Could not parse GeneMind FOV name: %s", qname)
+		}
+		location.TileNumber = 1000*rowFOVIndex + colFOVIndex
+	} else if TileName, _ := strconv.Atoi(location.TileName); TileName < 100000 {
+		if TileName > 9999 {
+			location.Surface = strconv.Itoa(TileName / 10000)
+			location.Swath = strconv.Itoa((TileName % 10000) / 1000)
+			location.Section = strconv.Itoa((TileName % 1000) / 100)
+			location.TileNumber = TileName % 100
+		} else {
+			location.Surface = strconv.Itoa(TileName / 1000)
+			location.Swath = strconv.Itoa((TileName % 1000) / 100)
+			location.TileNumber = TileName % 100
+		}
 	} else {
-		location.Surface = location.TileName / 1000
-		location.Swath = (location.TileName % 1000) / 100
-		location.TileNumber = location.TileName % 100
+		log.Fatalf("Could not parse name: %s, unexpected tile name %s, expected 4 or 5 digits",
+			qname, location.TileName)
 	}
 	return location
 }

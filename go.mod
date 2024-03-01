@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/Schaudge/grailbase v0.0.0-20240223061707-44c758a471c0
-	github.com/Schaudge/grailbio v0.0.0-20240223065831-51deab3a8f55
+	github.com/Schaudge/grailbio v0.0.0-20240301093411-9ba24aa9aa62
 	github.com/Schaudge/hts v0.0.0-20240223063651-737b4d69d68c
 	github.com/grailbio/testutil v0.0.3
 	github.com/stretchr/testify v1.8.4
@@ -13,9 +13,9 @@ require (
 require (
 	blainsmith.com/go/seahash v1.2.1 // indirect
 	github.com/DataDog/zstd v1.5.5 // indirect
-	github.com/aws/aws-sdk-go v1.50.25 // indirect
+	github.com/aws/aws-sdk-go v1.50.29 // indirect
 	github.com/biogo/store v0.0.0-20201120204734-aad293a2328f // indirect
-	github.com/bytedance/sonic v1.11.0 // indirect
+	github.com/bytedance/sonic v1.11.2 // indirect
 	github.com/chenzhuoyu/base64x v0.0.0-20230717121745-296ad89f973d // indirect
 	github.com/chenzhuoyu/iasm v0.9.1 // indirect
 	github.com/creachadair/cityhash v0.1.1 // indirect
@@ -62,7 +62,7 @@ require (
 	go.uber.org/multierr v1.11.0 // indirect
 	go.uber.org/zap v1.27.0 // indirect
 	golang.org/x/arch v0.7.0 // indirect
-	golang.org/x/crypto v0.19.0 // indirect
+	golang.org/x/crypto v0.20.0 // indirect
 	golang.org/x/net v0.21.0 // indirect
 	golang.org/x/sync v0.6.0 // indirect
 	golang.org/x/sys v0.17.0 // indirect
